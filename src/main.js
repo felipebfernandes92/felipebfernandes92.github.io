@@ -1,4 +1,6 @@
-import Vue from "vue";
+import './firebase/index';
+
+import Vue from "vue"
 import './plugins/vuetify'
 import App from "./App.vue";
 import router from "./router/";
@@ -6,6 +8,10 @@ import store from "./store";
 import "./registerServiceWorker";
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import 'font-awesome/css/font-awesome.css'
+
+import VueFire from 'vuefire'
+
+Vue.use(VueFire)
 
 Vue.config.productionTip = false;
 

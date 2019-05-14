@@ -1,6 +1,16 @@
 export default [
 
   {
+    path: '/clientes',
+    meta: { breadcrumb: false },
+    name: 'clientes',
+    component: () => import(
+      /* webpackChunkName: "routes" */
+      `@/views/Clientes.vue`
+    )
+  },
+
+  {
     path: '*',
     meta: {
       public: true,
@@ -60,6 +70,15 @@ export default [
     redirect: {
       name: 'Dashboard'
     }
+  },
+  {
+    path: '/clientes',
+    meta: {},
+    name: 'Clientes',
+    component: () => import(
+      /* webpackChunkName: "routes" */
+      `@/views/Clientes.vue`
+    )
   },
   {
     path: '/dashboard',
